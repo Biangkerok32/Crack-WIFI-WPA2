@@ -1,0 +1,18 @@
+name: Test Pass
+
+on: workflow_dispatch
+  
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup
+      run: |
+        sudo apt-get update
+        sudo apt install hashcat
+        hashcat -d 1 -m 22000 -a 3 adil-generated.hccapx ?d?d?d?d?d?d?d?d

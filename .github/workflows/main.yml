@@ -15,4 +15,4 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt install hashcat
-        hashcat -d 1 -m 22000 -a 3 adil-generated.hccapx ?d?d?d?d?d?d?d?d
+        hashcat -d 1 -m 22000 -a 3 adil-generated.hccapx ?d?d?d?d?d?d?d?d -- force --show
